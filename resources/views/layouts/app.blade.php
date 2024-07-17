@@ -28,6 +28,8 @@
     <main>
         @yield('main-content')
     </main>
+    @include('partials.bottomMain')
+
 
     @include('partials.footer')
 

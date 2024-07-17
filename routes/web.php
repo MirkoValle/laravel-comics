@@ -16,44 +16,259 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $links = [
         [
-            'name' => 'characters',
-            'active' => false
+            'name' => 'home',
+            'active' => false,
+            'url' => '/'
         ],
         [
-            'name' => 'Comics',
-            'active' => true
+            'name' => 'comics',
+            'active' => false,
+            'url' => '/comics'
         ],
         [
             'name' => 'movies',
-            'active' => false
+            'active' => false,
+            'url' => '/'
         ],
         [
             'name' => 'tv',
-            'active' => false
+            'active' => false,
+            'url' => '/'
         ],
         [
             'name' => 'games',
-            'active' => false
+            'active' => false,
+            'url' => '/'
         ],
         [
             'name' => 'collectibles',
-            'active' => false
+            'active' => false,
+            'url' => '/'
         ],
         [
             'name' => 'videos',
-            'active' => false
+            'active' => false,
+            'url' => '/'
         ],
         [
             'name' => 'fans',
-            'active' => false
+            'active' => false,
+            'url' => '/'
         ],
         [
             'name' => 'news',
-            'active' => false
+            'active' => false,
+            'url' => '/'
         ],
         [
             'name' => 'shop',
-            'active' => false
+            'active' => false,
+            'url' => '/'
+        ],
+    ];
+    $footerLinks = [
+        [
+            'name' => 'DC Comics',
+            'links' => [
+                [
+                    'title' => 'Characters',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Comics',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Movies',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'TV',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Games',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Videos',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'News',
+                    'url' => 'google.com',
+                ],
+            ],
+        ],
+        [
+            'name' => 'Shop',
+            'links' => [
+                [
+                    'title' => 'Shop DC',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Shop DC Collectibles',
+                    'url' => 'google.com',
+                ],
+            ],
+        ],
+        [
+            'name' => 'DC',
+            'links' => [
+                [
+                    'title' => 'Terms Of Use',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Privacy policy(New)',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Ad Choices',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Advertising',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Jobs',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Subscriptions',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Talent Workshops',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'CSPC Certificates',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Ratings',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Shop Help',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'Contact Us',
+                    'url' => 'google.com',
+                ],
+            ],
+        ],
+        [
+            'name' => 'Shop',
+            'links' => [
+                [
+                    'title' => 'DC',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'MAD Magazine',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'DC Kids',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'DC Universe',
+                    'url' => 'google.com',
+                ],
+                [
+                    'title' => 'DC Power Visa',
+                    'url' => 'google.com',
+                ],
+            ],
+        ],
+    ];
+    $blueLinks = [
+        [
+            'name' => 'digital comics',
+            'url' => '',
+            'src' => 'buy-comics-digital-comics.png',
+        ],
+        [
+            'name' => 'dc merchandise',
+            'url' => '',
+            'src' => 'buy-comics-merchandise.png',
+        ],
+        [
+            'name' => 'subscription',
+            'url' => '',
+            'src' => 'buy-comics-subscriptions.png'
+        ],
+        [
+            'name' => 'comic shop locator',
+            'url' => '',
+            'src' => 'buy-comics-shop-locator.png'
+        ],
+        [
+            'name' => 'dc power visa',
+            'url' => '',
+            'src' => 'buy-dc-power-visa.svg'
+        ],
+    ];
+    return view('pages.home', compact('links', 'footerLinks', 'blueLinks'));
+})->name('guest.home');
+
+Route::get('/comics', function () {
+    $links = [
+        [
+            'name' => 'home',
+            'active' => false,
+            'url' => '/'
+        ],
+        [
+            'name' => 'comics',
+            'active' => false,
+            'url' => '/comics'
+        ],
+        [
+            'name' => 'movies',
+            'active' => false,
+            'url' => '/'
+        ],
+        [
+            'name' => 'tv',
+            'active' => false,
+            'url' => '/'
+        ],
+        [
+            'name' => 'games',
+            'active' => false,
+            'url' => '/'
+        ],
+        [
+            'name' => 'collectibles',
+            'active' => false,
+            'url' => '/'
+        ],
+        [
+            'name' => 'videos',
+            'active' => false,
+            'url' => '/'
+        ],
+        [
+            'name' => 'fans',
+            'active' => false,
+            'url' => '/'
+        ],
+        [
+            'name' => 'news',
+            'active' => false,
+            'url' => '/'
+        ],
+        [
+            'name' => 'shop',
+            'active' => false,
+            'url' => '/'
         ],
     ];
     $data = [
@@ -288,5 +503,32 @@ Route::get('/', function () {
             ],
         ],
     ];
-    return view('pages.home', compact('links', 'data','footerLinks'));
-});
+    $blueLinks = [
+        [
+            'name' => 'digital comics',
+            'url' => '',
+            'src' => 'buy-comics-digital-comics.png',
+        ],
+        [
+            'name' => 'dc merchandise',
+            'url' => '',
+            'src' => 'buy-comics-merchandise.png',
+        ],
+        [
+            'name' => 'subscription',
+            'url' => '',
+            'src' => 'buy-comics-subscriptions.png'
+        ],
+        [
+            'name' => 'comic shop locator',
+            'url' => '',
+            'src' => 'buy-comics-shop-locator.png'
+        ],
+        [
+            'name' => 'dc power visa',
+            'url' => '',
+            'src' => 'buy-dc-power-visa.svg'
+        ],
+    ];
+    return view('pages.comics', compact('links', 'data', 'footerLinks', 'blueLinks'));
+})->name('guest.comics');

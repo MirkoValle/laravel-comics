@@ -37,14 +37,20 @@ header{
                 font-weight: 600;
                 color: #303030;
                 border-bottom: .5rem solid transparent;
-
-                    &.active{
-                                border-bottom: .5rem solid #0282f9;
-                                color: #0282f9;
-                            }
+                a{
+                    text-transform: uppercase;
+                    font-size: .8rem;
+                    font-weight: 600;
+                    color: #303030;
                     &:hover{
                         color: #0282f9;
                     }
+                }
+                &.active{
+                            border-bottom: .5rem solid #0282f9;
+                            color: #0282f9;
+                }
+
             }
         }
     }
@@ -55,6 +61,8 @@ main{
     background-color: #1c1c1c;
 
     .container{
+        max-width: 1260px;
+        margin: auto;
         padding: 2rem;
         position: relative;
         width: 110rem;
@@ -65,12 +73,13 @@ main{
         align-items: center;
 
         span {
+            font-size: 1.5rem;
             text-transform: uppercase;
             background-color: #0282f9;
             padding: .7rem 1.2rem;
             font-weight: 600;
             position: absolute;
-            top: -1.3rem;
+            top: -1.5rem;
             left: 1rem;
         }
 
@@ -105,6 +114,41 @@ main{
             color: white;
             font-weight: 600;
             width: 12rem;
+        }
+    }
+
+}
+.blue-links{
+    background-color: #0282f9;
+    padding: 2rem;
+    section{
+        max-width: 1260px;
+        margin: auto;
+        ul{
+            display: flex;
+            justify-content: space-between;
+
+            li{
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                padding: 1rem;
+                width: calc((100% / 5) );
+                cursor: pointer;
+
+                &:hover{
+                    background-color: rgba(231, 231, 231, 0.164);
+                }
+
+                img{
+                    width: 3rem;
+                }
+                h2{
+                    padding-left: 1rem;
+                    font-size: 1rem;
+                    color: white;
+                }
+            }
         }
     }
 }
@@ -151,7 +195,7 @@ main{
 
 footer{
     div.container{
-        background-image: url(../assets/img/footer-bg.jpg);
+        background-image: url(../img/footer-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         padding: 1rem;
@@ -199,5 +243,45 @@ footer{
 
 div.jumbo{
     background-image: url(../img/jumbotron.jpg);
-    height: 30rem;
+    height: 25rem;
+}
+
+
+div.bottom-socials{
+    background-color: #303030;
+    section{
+        max-width: 1260px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        text-transform: uppercase;
+
+        button{
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: white;
+            background-color: transparent;
+            border: .2rem solid #0282f9;
+            padding: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #0282f9;
+            font-size: .8rem;
+
+            img{
+                padding-left: 1rem;
+                cursor: pointer;
+            }
+        }
+
+    }
+
 }

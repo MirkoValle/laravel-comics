@@ -18,4 +18,6 @@
             <img src="{{ Vite::asset('resources/img/dc-logo-bg.png') }}" alt="">
         </section>
     </div>
+
+    @include('partials.bottomSocials')
 </footer>
